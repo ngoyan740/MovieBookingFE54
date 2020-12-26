@@ -1,0 +1,14 @@
+// .nav-link.active {
+//     background-color: red !important;
+// }
+
+.nav-link {
+    &.active {
+        background-color: red !important;
+
+    }
+}
+
+// .nav-link {
+//     color: #e1e1e1;
+// }
