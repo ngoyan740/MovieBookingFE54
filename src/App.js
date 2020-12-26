@@ -1,24 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
 
+import {BrowserRouter, Route, Switch} from 'react-router-dom'
+import TrangChu from './pages/TrangChu/TrangChu';
+import DangNhap from './pages/DangNhap/DangNhap';
+import DangKy from './pages/DangKy/DangKy';
+import ChiTietPhim from './pages/ChiTietPhim/ChiTietPhim';
+import Header from './components/Header/Header';
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+    <Header />
+     <Switch>
+      <Route exact path="/trangchu" component={TrangChu}/>
+      <Route exact path="/dangnhap" component={DangNhap}/>
+      <Route exact path="/dangky" component={DangKy}/>
+      <Route exact path="/chitietphim/:maPhim" component={ChiTietPhim}/>
+      <Route exact path="/" component={TrangChu}/>
+    </Switch>
+
+    </BrowserRouter>
   );
 }
 
