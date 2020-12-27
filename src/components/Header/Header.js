@@ -2,7 +2,6 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import './header.css'
 
-
 //NavLink : là thay thế thẻ a trong react-router-dom -> chuyển trang mà không load lại trang chủ
 // <NavLink className="nav-link" to="/trangchu">
 
@@ -10,7 +9,7 @@ export default function Header() {
     return (
         <div className="border-bottom-0 border-light">
             <nav className="navbar navbar-expand-sm navbar-dark" style={{ backgroundColor: '#343a3f' }}>
-                <a className="navbar-brand text-white mr-4" href="/trangchu"><img src="../img/movie.png" width="50" height="50"/></a>
+                <a className="navbar-brand text-white mr-4" href="/trangchu"><img src="./img/movie.png" width="50" height="50"/></a>
                 <button className="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation" />
                 <div className="collapse navbar-collapse" id="collapsibleNavId">
                     <ul className="navbar-nav mr-auto mt-2 mt-lg-0">

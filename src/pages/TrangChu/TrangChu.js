@@ -6,6 +6,7 @@ import { NavLink } from 'react-router-dom';
 
 export default function TrangChu(props) {
 
+    console.log('propsRoute: ', props);
 
     //useSelector là hook react dùng để lấy state từ store về KHÔNG BIẾN THÀNH PROPS và ko dùng mapStateToProps
 

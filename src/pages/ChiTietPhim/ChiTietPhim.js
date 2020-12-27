@@ -6,6 +6,7 @@ import moment from 'moment'
 export default function ChiTietPhim(props) {
     //Props: lấy dữ liệu ra. props.match.params: props này là props của thẻ Route truyền cho component
 
+    console.log('PropsChiTietPhim', props);
 
     //Tạo 1 state chứa thông tin chi tiết phim giá trị ban đầu là object rỗng
     const [chiTietPhim, setChiTietPhim] = useState({});

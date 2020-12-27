@@ -1,5 +1,6 @@
 import Axios from 'axios'
-import { DOMAIN, USER_LOGIN, ACCESS_TOKEN } from '../../util/settings'
+import { DOMAIN, USER_LOGIN, ACCESS_TOKEN } from '../../util/settings';
+import {history} from '../../App'
 
 
 //nguoiDung = {taiKhoan: '', matKhau: ''}
@@ -30,6 +31,10 @@ export const dangNhapAction = (nguoiDung) => {
             // Lấy token lưu vào localStorage
             localStorage.setItem(ACCESS_TOKEN, result.data.accessToken);
             localStorage.setItem(USER_LOGIN, JSON.stringify(result.data));
+            
+            //CHuyển hướng vào trang đặt vé
+            // history.push('/trangchu')
+            history.goBack();
 
         } catch (err) {
             console.log(err.response?.data);

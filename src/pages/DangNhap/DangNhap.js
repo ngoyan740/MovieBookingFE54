@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 import {useDispatch} from 'react-redux'
 import { dangNhapAction } from '../../redux/actions/QuanLyNguoiDungActions';
 
-export default function DangNhap() {
+export default function DangNhap(props) {
     //useDispatch là hook do react redux cung cấp tương tự props.dispatch khi sử dụng connect (ko cần tạo ra biến dispatch...)
 
      const dispatch = useDispatch();
@@ -45,6 +45,12 @@ export default function DangNhap() {
             //Gọi api để xác thực đăng nhập : dùng hook hoặc connect
                 // dispatch(gửi action)
                 dispatch(dangNhapAction(state));
+
+                //Chuyển hướng trang vầ trang chủ
+                //push: chuyển hướng trang có thể backpage lại được
+                // repalce: chuyển hướng trang hiện tại bàng trnag khác
+                // props.history.push('/trangchu');
+                // sai đúng về vị trí cũ
         }
 
     return (
